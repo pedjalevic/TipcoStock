@@ -1,2 +1,7 @@
+com.tibco.bw.core.design.debug.ui.launch.existingApplications=OrderManager/StockMarket/
+com.tibco.bw.core.design.debug.ui.launch.processesArg=StockMarket\=stockmarket.module.StockMarketPriceRequest/OrderManager\=ordermanager.module.CheckSecurityAccount,ordermanager.module.ReceiveWebOrder/
+com.tibco.bw.core.design.debug.ui.launch.selectedApplications=OrderManager/StockMarket/
+com.tibco.bw.core.design.debug.ui.launch.selectedModules=OrderManager.module/StockMarket.module/
+com.tibco.bw.core.design.debug.ui.launch.selectedProcesses=OrderManager.module\=ordermanager.module.CheckSecurityAccount,ordermanager.module.ReceiveWebOrder/StockMarket.module\=stockmarket.module.StockMarketPriceRequest/
 eclipse.preferences.version=1
 org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n

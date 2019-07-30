@@ -1,1 +1,7 @@
 1564322385864	Rename resource 'Process.bwp'
+1564398789867	Rename resource 'ProcessReciveWebOrder.bwp'
+1564473763045	Rename resource 'Process.bwp'
+1564488146312	Rename Module Configuration Property Group from 'newGroup' to 'EMS'
+1564488170606	Rename Module Configuration Property from '/EMS/newProperty' to 'JNDIURL'
+1564488371401	Rename Module Configuration Property Group from 'newGroup1' to 'Services'
+1564488390387	Rename Module Configuration Property from '/Services/newProperty' to 'DestinationName'

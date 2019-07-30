@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/20190730152448" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CheckCashAccountService" targetNamespace="http://xmlns.example.com/20190730152448">
+  <wsdl:types>
+    <xsd:schema xmlns:Q1="http://www.tibco-bw.org/StockMarketInterface/mktOrder" xmlns:Q2="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply" elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/20190730152448">
+            <xsd:import namespace="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply"/>
+            <xsd:import namespace="http://www.tibco-bw.org/StockMarketInterface/mktOrder"/>
+            <xsd:element name="operationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+
+          	<xsd:element ref="Q1:custId"/>
+          	<xsd:element ref="Q1:secCode"/>
+          	<xsd:element ref="Q1:volume"/>
+          	<xsd:element ref="Q2:ccy"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ccaResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ccaFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ccaRequest">
+    <wsdl:part element="tns:operationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ccaResponse">
+    <wsdl:part element="tns:ccaResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="ccaFault">
+    <wsdl:part element="tns:ccaFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Service">
+    <wsdl:operation name="cca">
+      <wsdl:input message="tns:ccaRequest" name="operationInput"/>
+      <wsdl:output message="tns:ccaResponse" name="operationOutput"/>
+      <wsdl:fault message="tns:ccaFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

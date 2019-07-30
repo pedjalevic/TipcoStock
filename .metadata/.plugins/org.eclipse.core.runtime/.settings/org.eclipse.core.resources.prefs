@@ -1,2 +1,4 @@
+description.buildorder=OrderManager.module/OrderManager
+description.defaultbuildorder=false
 eclipse.preferences.version=1
 version=1

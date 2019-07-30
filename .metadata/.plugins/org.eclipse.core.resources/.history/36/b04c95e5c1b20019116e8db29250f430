@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_YEluULE8EemrPpjLpRMw1A" targetNamespace="http://tns.tibco.com/bw/composite/StockMarket.module" name="StockMarket.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_Y9u80LE8EemrPpjLpRMw1A" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-BQsLE8EemrPpjLpRMw1A" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-IlcLE8EemrPpjLpRMw1A" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-P6MLE8EemrPpjLpRMw1A" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-Wn4LE8EemrPpjLpRMw1A" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-dVkLE8EemrPpjLpRMw1A" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-kqULE8EemrPpjLpRMw1A" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-rYALE8EemrPpjLpRMw1A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y-yFsLE8EemrPpjLpRMw1A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_RkIcQLKgEemTo_2ePwMnwQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_RkIcQbKgEemTo_2ePwMnwQ" processName="stockmarket.module.StockMarketPriceRequest"/>
+  </sca:component>
+</sca:composite>
