@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config:ProjectConfig xmlns:config="http://www.tibco.com/XPD/projectConfig">
+  <projectDetails id="com.example.stockmarketsimulator">
+    <globalDestinations/>
+    <edition>bwe</edition>
+  </projectDetails>
+  <config:specialFolders>
+    <config:folder id="_Io6M4LLQEemDI87XmjnQXg" kind="com.tibco.amx.zion.schema" location="Schemas"/>
+    <config:folder id="_Io_scLLQEemDI87XmjnQXg" kind="com.tibco.bw.process.folder" location="Processes"/>
+    <config:folder id="_IpCvwLLQEemDI87XmjnQXg" kind="wsdl" location="Service Descriptors"/>
+  </config:specialFolders>
+</config:ProjectConfig>

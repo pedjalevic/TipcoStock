@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_Iso2ULLQEemDI87XmjnQXg" targetNamespace="http://tns.tibco.com/bw/composite/StockMarketSimulator.module" name="StockMarketSimulator.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_I6eeALLQEemDI87XmjnQXg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_I8ID0LLQEemDI87XmjnQXg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_I9J-kLLQEemDI87XmjnQXg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_I-I2ALLQEemDI87XmjnQXg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_I_GfULLQEemDI87XmjnQXg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_JAJBILLQEemDI87XmjnQXg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_JBFcULLQEemDI87XmjnQXg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_JCDFoLLQEemDI87XmjnQXg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_JDEZULLQEemDI87XmjnQXg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ttJNYLL4Eemi4pj7_igvuA" name="/Service/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_IxHtsLLQEemDI87XmjnQXg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_IxHtsbLQEemDI87XmjnQXg" processName="stockmarketsimulator.module.StockMarketPriceRequest"/>
+  </sca:component>
+</sca:composite>

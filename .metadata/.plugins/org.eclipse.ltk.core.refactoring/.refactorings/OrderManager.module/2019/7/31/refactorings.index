@@ -7,3 +7,6 @@
 1564492727972	Rename Operation from 'operation' to 'cca'
 1564493274581	Rename PartnerLink from 'Service' to 'CheckCashAccount'
 1564493284718	Rename Operation from 'operation' to 'cca'
+1564509081362	Rename Module Configuration Property Group from 'newGroup' to 'Services'
+1564509244755	Rename Module Configuration Property from '/Services/newProperty' to 'DestinationNameRequest'
+1564509298880	Rename Module Configuration Property from '/Services/DestinationNameRequest' to 'DestinationNameRespons'

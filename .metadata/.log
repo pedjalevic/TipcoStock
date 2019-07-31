@@ -4725,3 +4725,1972 @@ java.lang.IllegalStateException: Cannot activate read/write transaction in read-
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.jface 4 0 2019-07-30 16:01:46.266
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalArgumentException: Figure is not a child)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:175)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:390)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at com.tibco.bw.core.design.resource.refactoring.initiator.BWProjectsRefactoringWizard$ResourceSelectionWizardPage.performFinish(BWProjectsRefactoringWizard.java:257)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at com.tibco.bw.core.design.resource.util.RepairProjectsAction.run(RepairProjectsAction.java:69)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:253)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.IllegalArgumentException: Figure is not a child
+	at org.eclipse.draw2d.Figure.remove(Figure.java:1264)
+	at org.eclipse.gef.editparts.AbstractGraphicalEditPart.removeChildVisual(AbstractGraphicalEditPart.java:792)
+	at com.tibco.bw.core.design.process.editor.diagram.edit.parts.ProcessEditPart.removeChildVisual(ProcessEditPart.java:290)
+	at org.eclipse.gef.editparts.AbstractEditPart.removeChild(AbstractEditPart.java:881)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.refreshChild(GraphicalEditPart.java:1231)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.handleMajorSemanticChange(GraphicalEditPart.java:1258)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.handleNotificationEvent(GraphicalEditPart.java:1477)
+	at com.tibco.bw.core.design.process.editor.diagram.edit.parts.ProcessNameEditPart.handleNotificationEvent(ProcessNameEditPart.java:533)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.notifyChanged(GraphicalEditPart.java:1438)
+	at org.eclipse.gmf.runtime.diagram.core.listener.DiagramEventBroker.fireNotification(DiagramEventBroker.java:504)
+	at org.eclipse.gmf.runtime.diagram.core.listener.DiagramEventBroker.resourceSetChanged(DiagramEventBroker.java:399)
+	at org.eclipse.gmf.runtime.diagram.ui.DiagramEventBrokerThreadSafe.resourceSetChanged(DiagramEventBrokerThreadSafe.java:73)
+	at org.eclipse.gmf.runtime.diagram.core.DiagramEditingDomainFactory$DiagramEditingDomain.postcommit(DiagramEditingDomainFactory.java:214)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.deactivate(TransactionalEditingDomainImpl.java:543)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.close(TransactionImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:474)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:333)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.postcommit(TransactionalEditingDomainImpl.java:771)
+	at org.eclipse.gmf.runtime.diagram.core.DiagramEditingDomainFactory$DiagramEditingDomain.postcommit(DiagramEditingDomainFactory.java:245)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.deactivate(TransactionalEditingDomainImpl.java:543)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.close(TransactionImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:474)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand.setMutability(SetViewMutabilityCommand.java:161)
+	at org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand.execute(SetViewMutabilityCommand.java:128)
+	at org.eclipse.gef.commands.CompoundCommand.execute(CompoundCommand.java:111)
+	at org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy$AsyncCommand.doExecute(CanonicalEditPolicy.java:154)
+	at org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy$AsyncCommand$1.run(CanonicalEditPolicy.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 55 more
+
+!ENTRY com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE [1433] The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+!STACK 0
+java.sql.BatchUpdateException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:999)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:81)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:201)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:391)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:346)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2201)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:81)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1323)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	... 3 more
+Caused by: java.sql.SQLException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:45)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:119)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:70)
+	... 11 more
+Caused by: ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	... 5 more
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEJoLLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwsLLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwsrLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEws7LSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwtbLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwtrLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwsbLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE _kYEwtLLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:46.557
+!MESSAGE platform:/resource/OrderManager.module/Processes/ordermanager/module/CheckSecurityAccount.bwp#TIMESTAMP
+
+!ENTRY org.eclipse.gmf.runtime.draw2d.ui 2 2 2019-07-30 16:01:46.561
+!MESSAGE MapModeUtil#getMapMode(IFigure fig) fig parameter must be attached to a parent - using default MapMode
+
+!ENTRY org.eclipse.gmf.runtime.draw2d.ui 2 2 2019-07-30 16:01:46.561
+!MESSAGE MapModeUtil#getMapMode(IFigure fig) fig parameter must be attached to a parent - using default MapMode
+
+!ENTRY org.eclipse.gmf.runtime.draw2d.ui 2 2 2019-07-30 16:01:46.817
+!MESSAGE MapModeUtil#getMapMode(IFigure fig) fig parameter must be attached to a parent - using default MapMode
+
+!ENTRY org.eclipse.gmf.runtime.draw2d.ui 2 2 2019-07-30 16:01:46.817
+!MESSAGE MapModeUtil#getMapMode(IFigure fig) fig parameter must be attached to a parent - using default MapMode
+
+!ENTRY com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE [1432] The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+!STACK 0
+java.sql.BatchUpdateException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:999)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:81)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:201)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.wrapInSQLException(TransactionResourceImpl.java:391)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(TransactionResourceImpl.java:346)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(EmbedConnection.java:2201)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(ConnectionChild.java:81)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1323)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	... 3 more
+Caused by: java.sql.SQLException: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:45)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:119)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:70)
+	... 11 more
+Caused by: ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190730135736990' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	... 5 more
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdGao7LSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE platform:/resource/OrderManager.module/Processes/ordermanager/module/ReceiveWebOrder.bwp#TIMESTAMP
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdFzkLLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdGapLLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdGaobLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdGaorLSEemDI87XmjnQXg
+!SUBENTRY 1 com.tibco.xpd.resources 4 0 2019-07-30 16:01:47.084
+!MESSAGE _kdGaoLLSEemDI87XmjnQXg
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-07-30 16:01:47.343
+!MESSAGE LockManager.handleException
+!STACK 0
+java.lang.IllegalStateException: Cannot activate read/write transaction in read-only transaction context
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.acquire(TransactionalEditingDomainImpl.java:576)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.activate(TransactionalEditingDomainImpl.java:508)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.start(TransactionImpl.java:204)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.startTransaction(TransactionalEditingDomainImpl.java:424)
+	at com.tibco.amf.design.sr.core.wc.SRWorkingCopy.doLoadModel(SRWorkingCopy.java:152)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.Ô00000(AbstractWorkingCopy.java:1701)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.getRootElement(AbstractWorkingCopy.java:1655)
+	at com.tibco.amf.design.sr.core.internal.indexer.NamedResourceReferenceIndexer.getIndexItems(NamedResourceReferenceIndexer.java:93)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl.o00000(IndexerServiceImpl.java:743)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl.processWorkingCopyPropertyChange(IndexerServiceImpl.java:390)
+	at com.tibco.xpd.validation.internal.engine.WorkingCopyMonitor.propertyChange(WorkingCopyMonitor.java:168)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.new(AbstractWorkingCopy.java:861)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.access$9(AbstractWorkingCopy.java:858)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy$9.run(AbstractWorkingCopy.java:2373)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:167)
+	at org.eclipse.ui.internal.UILockListener.aboutToWait(UILockListener.java:128)
+	at org.eclipse.core.internal.jobs.LockManager.aboutToWait(LockManager.java:123)
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:859)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:384)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:420)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl.o00000(IndexerServiceImpl.java:838)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl.o00000(IndexerServiceImpl.java:748)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl.processWorkingCopyPropertyChange(IndexerServiceImpl.java:401)
+	at com.tibco.xpd.validation.internal.engine.WorkingCopyMonitor.propertyChange(WorkingCopyMonitor.java:168)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.new(AbstractWorkingCopy.java:861)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.access$9(AbstractWorkingCopy.java:858)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy$9.run(AbstractWorkingCopy.java:2373)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.o00000(AbstractWorkingCopy.java:2370)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.fireWCModelChanged(AbstractWorkingCopy.java:763)
+	at com.tibco.xpd.resources.wc.AbstractWorkingCopy.commandStackChanged(AbstractWorkingCopy.java:642)
+	at com.tibco.xpd.resources.wc.AbstractTransactionalWorkingCopy$WorkingCopyResourceSetListener.resourceSetChanged(AbstractTransactionalWorkingCopy.java:1126)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl$1.run(TransactionalEditingDomainImpl.java:781)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:328)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.postcommit(TransactionalEditingDomainImpl.java:771)
+	at org.eclipse.gmf.runtime.diagram.core.DiagramEditingDomainFactory$DiagramEditingDomain.postcommit(DiagramEditingDomainFactory.java:245)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.deactivate(TransactionalEditingDomainImpl.java:543)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.close(TransactionImpl.java:712)
+	at org.eclipse.emf.transaction.impl.TransactionImpl.commit(TransactionImpl.java:474)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:155)
+	at org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand.setMutability(SetViewMutabilityCommand.java:161)
+	at org.eclipse.gmf.runtime.diagram.ui.commands.SetViewMutabilityCommand.execute(SetViewMutabilityCommand.java:128)
+	at org.eclipse.gef.commands.CompoundCommand.execute(CompoundCommand.java:111)
+	at org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy$AsyncCommand.doExecute(CanonicalEditPolicy.java:154)
+	at org.eclipse.gmf.runtime.diagram.ui.editpolicies.CanonicalEditPolicy$AsyncCommand$1.run(CanonicalEditPolicy.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:175)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:390)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.run(RefactoringWizardDialog2.java:331)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.internalPerformFinish(RefactoringWizard.java:637)
+	at org.eclipse.ltk.ui.refactoring.UserInputWizardPage.performFinish(UserInputWizardPage.java:153)
+	at com.tibco.bw.core.design.resource.refactoring.initiator.BWProjectsRefactoringWizard$ResourceSelectionWizardPage.performFinish(BWProjectsRefactoringWizard.java:257)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizard.performFinish(RefactoringWizard.java:710)
+	at org.eclipse.ltk.internal.ui.refactoring.RefactoringWizardDialog2.okPressed(RefactoringWizardDialog2.java:455)
+	at org.eclipse.jface.dialogs.Dialog.buttonPressed(Dialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:619)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:832)
+	at org.eclipse.jface.window.Window.open(Window.java:808)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation$1.run(RefactoringWizardOpenOperation.java:187)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:202)
+	at org.eclipse.ltk.ui.refactoring.RefactoringWizardOpenOperation.run(RefactoringWizardOpenOperation.java:122)
+	at com.tibco.bw.core.design.resource.util.RepairProjectsAction.run(RepairProjectsAction.java:69)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:253)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:595)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:511)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:420)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2019-07-30 19:47:02.671 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2019-07-30 19:47:04.409
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2019-07-30 19:47:04.411
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2019-07-30 19:47:04.414
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2019-07-30 19:47:04.415
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.182
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.transport.eclipse' and 'com.tibco.amf.sharedresource.model.transport.eclipse' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/httpconnector'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.185
+!MESSAGE Both 'com.tibco.bw.core.model.eclipse' and 'com.tibco.bw.core.model.eclipse' register a package for 'http://ns.tibco.com/bw/core/internalactivity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.186
+!MESSAGE Both 'com.tibco.bw.sharedresource.http.model' and 'com.tibco.bw.sharedresource.http.model' register a package for 'http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.187
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.data.eclipse' and 'com.tibco.bw.sharedresource.jdbc.model' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.189
+!MESSAGE Both 'com.tibco.amf.sca.model.eclipse' and 'com.tibco.bw.sharedresource.ws.policy.model' register a package for 'http://schemas.xmlsoap.org/ws/2004/09/policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.189
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/extensions/soap/tibcojms'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.190
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/soap12'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.197
+!MESSAGE Both 'com.tibco.bw.sharedresource.identity.model' and 'com.tibco.bw.sharedresource.ws.policy.model' register an extension parser for 'policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.197
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'auth'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.198
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'identity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 19:47:07.199
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'userid'
+
+!ENTRY org.eclipse.ui 2 0 2019-07-30 19:47:07.646
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:07.646
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:07.646
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:07.646
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY org.eclipse.ui 2 0 2019-07-30 19:47:08.118
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:08.118
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:08.118
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 19:47:08.118
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 19:47:14.172
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.ui.sdk.prefs (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:43)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 19:47:14.181
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 19:47:14.208
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.artifact.repository.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.artifact.repository.prefs.bak (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 19:47:14.210
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.artifact.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 19:47:14.267
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs.bak (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 19:47:14.268
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.pde.core 4 0 2019-07-30 19:47:14.728
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred getting the plug-ins in this container
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:604)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:525)
+	at org.eclipse.pde.internal.core.PluginModelManager.findModel(PluginModelManager.java:874)
+	at org.eclipse.pde.core.plugin.PluginRegistry.findModel(PluginRegistry.java:110)
+	at com.tibco.zion.dc.util.ProjectHelper.isZionApplicationProject(ProjectHelper.java:72)
+	at com.tibco.bw.core.design.project.explorer.EditionDecorator.decorate(EditionDecorator.java:24)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:267)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\config\drivers\shells\jdbc.oracle.runtime\hotfix\runtime\plugins
+Contains: Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\system\hotfix\lib\common
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2019-07-30 19:47:14.729
+!MESSAGE Problems occurred getting the plug-ins in this container
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2019-07-30 19:47:14.729
+!MESSAGE Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\config\drivers\shells\jdbc.oracle.runtime\hotfix\runtime\plugins
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2019-07-30 19:47:14.729
+!MESSAGE Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\system\hotfix\lib\common
+
+!ENTRY com.tibco.xpd.fragments 4 0 2019-07-30 19:47:20.960
+!MESSAGE com.tibco.xpd.fragments.internal.FragmentsManager$5.run(FragmentsManager.java:787) FragmentsManager.initialize(): No root categories found!!!
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-07-30 19:47:20.979
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalStateException: Profile not locked due to exception: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.lock (Access is denied)
+	at org.eclipse.equinox.internal.p2.engine.ProfileLock.lock(ProfileLock.java:106)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:529)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:365)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:249)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:179)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:89)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2019-07-30 19:47:20.981
+!MESSAGE Unhandled Exception
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk.scheduler 4 0 2019-07-30 19:47:20.981
+!MESSAGE Unable to execute early startup code for an extension
+!STACK 0
+java.lang.IllegalStateException: Profile not locked due to exception: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.lock (Access is denied)
+	at org.eclipse.equinox.internal.p2.engine.ProfileLock.lock(ProfileLock.java:106)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:529)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:365)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:249)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:179)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:89)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 19:47:21.466
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.scheduler.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.ui.sdk.scheduler.prefs (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:43)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 19:47:21.467
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.scheduler.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:51:21.692
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.HasOneStoreConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:51:21.693
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyAliasNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:51:21.693
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyPasswordNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:51:21.694
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.trust.editor.constraint" could not find target EMF type "TrustConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:51:21.962
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.ssl.editor.com.tibco.trinity.ssl.editor.invalid.remote.host.constraint" could not find target EMF type "SSLServerConfiguration."
+
+!ENTRY org.eclipse.bpel.validator 1 0 2019-07-30 19:53:26.509
+!MESSAGE Validator Startup 53ms
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 19:53:28.404
+!MESSAGE Constraint "com.tibco.amf.design.sr.core.internal.validation.constraints.SharedResourceNotInWorkspace" could not find target EMF type "Property."
+
+!ENTRY org.eclipse.jface 4 0 2019-07-30 20:08:23.529
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:175)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:390)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.progress.ProgressManager$3.run(ProgressManager.java:983)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:1018)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:993)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.createSchema(XSDModelAdapter.java:135)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.lookupOrCreateSchema(XSDModelAdapter.java:213)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.buildModel(InternalXSDMultiPageEditor.java:247)
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor.createPages(ADTMultiPageEditor.java:173)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.createPages(InternalXSDMultiPageEditor.java:568)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:362)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1250)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:68)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:488)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:454)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:694)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:387)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1134)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3210)
+	at org.eclipse.ui.internal.WorkbenchPage.access$23(WorkbenchPage.java:3125)
+	at org.eclipse.ui.internal.WorkbenchPage$9.run(WorkbenchPage.java:3107)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3102)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3066)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3047)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:573)
+	at com.tibco.zion.common.component.xsdtree.action.NavigateToFileAction.run(NavigateToFileAction.java:59)
+	at com.tibco.zion.common.component.xsdtree.SimpleXsdContributionManager$1$1.doExecute(SimpleXsdContributionManager.java:124)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:513)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:219)
+	at com.tibco.zion.common.component.xsdtree.SimpleXsdContributionManager$1.widgetSelected(SimpleXsdContributionManager.java:155)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor$InternalLayout.layout(ADTMultiPageEditor.java:90)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1276)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:665)
+	at org.eclipse.swt.custom.CTabFolder.runUpdate(CTabFolder.java:3755)
+	at org.eclipse.swt.custom.CTabFolder$10.run(CTabFolder.java:3741)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 111 more
+
+!ENTRY org.eclipse.jface 4 0 2019-07-30 20:08:23.535
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:175)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:390)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.progress.ProgressManager$3.run(ProgressManager.java:983)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:1018)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:993)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.createSchema(XSDModelAdapter.java:135)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.lookupOrCreateSchema(XSDModelAdapter.java:213)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.buildModel(InternalXSDMultiPageEditor.java:247)
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor.createPages(ADTMultiPageEditor.java:173)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.createPages(InternalXSDMultiPageEditor.java:568)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:362)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1250)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer$1.handleEvent(LazyStackRenderer.java:68)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:488)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:454)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:694)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:387)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1134)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3210)
+	at org.eclipse.ui.internal.WorkbenchPage.access$23(WorkbenchPage.java:3125)
+	at org.eclipse.ui.internal.WorkbenchPage$9.run(WorkbenchPage.java:3107)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3102)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3066)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3047)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:573)
+	at com.tibco.zion.common.component.xsdtree.action.NavigateToFileAction.run(NavigateToFileAction.java:59)
+	at com.tibco.zion.common.component.xsdtree.SimpleXsdContributionManager$1$1.doExecute(SimpleXsdContributionManager.java:124)
+	at org.eclipse.emf.transaction.RecordingCommand.execute(RecordingCommand.java:135)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:513)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:219)
+	at com.tibco.zion.common.component.xsdtree.SimpleXsdContributionManager$1.widgetSelected(SimpleXsdContributionManager.java:155)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor$InternalLayout.layout(ADTMultiPageEditor.java:90)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1276)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:665)
+	at org.eclipse.swt.custom.CTabFolder.runUpdate(CTabFolder.java:3755)
+	at org.eclipse.swt.custom.CTabFolder$10.run(CTabFolder.java:3741)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 111 more
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:11:47.919
+!MESSAGE Invalid port number
+!STACK 0
+javax.jms.JMSException: Invalid port number
+	at com.tibco.tibjms.TibjmsxURL.parse(TibjmsxURL.java:207)
+	at com.tibco.tibjms.TibjmsxURL.parseMultiple(TibjmsxURL.java:93)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1254)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:11:56.821
+!MESSAGE Failed to connect to the server at tcp://<localhost>:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://<localhost>:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:12:35.297
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:12:39.870
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:12:47.033
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:24:36.736
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:24:56.548
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SESSION 2019-07-30 20:25:26.633 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_192
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -showlocation
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2019-07-30 20:25:31.456
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jdbc.driver.template 4 0 2019-07-30 20:25:31.461
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jdbc.driver.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2019-07-30 20:25:31.501
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY com.tibco.bw.sharedresource.jms.provider.template 4 0 2019-07-30 20:25:31.507
+!MESSAGE [SCR] Component definition XMLs not found in bundle com.tibco.bw.sharedresource.jms.provider.template. The component header value is OSGI-INF/*.xml
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.264
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.transport.eclipse' and 'com.tibco.amf.sharedresource.model.transport.eclipse' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/httpconnector'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.274
+!MESSAGE Both 'com.tibco.bw.core.model.eclipse' and 'com.tibco.bw.core.model.eclipse' register a package for 'http://ns.tibco.com/bw/core/internalactivity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.283
+!MESSAGE Both 'com.tibco.bw.sharedresource.http.model' and 'com.tibco.bw.sharedresource.http.model' register a package for 'http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.285
+!MESSAGE Both 'com.tibco.amf.sharedresource.model.data.eclipse' and 'com.tibco.bw.sharedresource.jdbc.model' register a package for 'http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.291
+!MESSAGE Both 'com.tibco.amf.sca.model.eclipse' and 'com.tibco.bw.sharedresource.ws.policy.model' register a package for 'http://schemas.xmlsoap.org/ws/2004/09/policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.292
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/extensions/soap/tibcojms'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.294
+!MESSAGE Both 'com.tibco.amf.wsdl.extensions.eclipse' and 'com.tibco.bw.wsdl.extensions' register a package for 'http://xsd.tns.tibco.com/wsdl/models/soap12'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.318
+!MESSAGE Both 'com.tibco.bw.sharedresource.identity.model' and 'com.tibco.bw.sharedresource.ws.policy.model' register an extension parser for 'policy'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.319
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'auth'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.321
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'identity'
+
+!ENTRY org.eclipse.emf.ecore 2 0 2019-07-30 20:25:37.323
+!MESSAGE Both 'com.tibco.bw.sharedresource.trinity.securityprovider.model' and 'com.tibco.trinity.securityprovider.model.eclipse' register an extension parser for 'userid'
+
+!ENTRY org.eclipse.ui 2 0 2019-07-30 20:25:38.873
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:38.873
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:38.873
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:38.873
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY org.eclipse.ui 2 0 2019-07-30 20:25:40.719
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:40.720
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.migration2x.ui', id='com.tibco.amf.tools.migration2x.ui.migrateTo3xCommand', categoryId='com.tibco.amf.tools.composite.resources.ui.TasksCategory'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:40.720
+!MESSAGE Commands should really have a category: plug-in='com.tibco.amf.tools.packager.ui', id='com.tibco.amf.tools.packager.ui.createDaa.command', categoryId='tibco.category.soa_platform'
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-07-30 20:25:40.720
+!MESSAGE Commands should really have a category: plug-in='com.tibco.bw.binding.soap.axis2.design', id='com.tibco.bw.binding.soap.axis2.design.generateWSDL', categoryId='tibco.category.soa_platform'
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 20:25:57.774
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.ui.sdk.prefs (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:43)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 20:25:57.796
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 20:25:57.859
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.artifact.repository.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.artifact.repository.prefs.bak (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 20:25:57.861
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.artifact.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 20:25:58.010
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.metadata.repository.prefs.bak (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 20:25:58.012
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.metadata.repository.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.pde.core 4 0 2019-07-30 20:25:59.562
+!MESSAGE The current target platform contains errors, open Window > Preferences > Plug-in Development > Target Platform for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems occurred getting the plug-ins in this container
+	at org.eclipse.pde.internal.core.PluginModelManager.getExternalBundles(PluginModelManager.java:604)
+	at org.eclipse.pde.internal.core.PluginModelManager.initializeTable(PluginModelManager.java:525)
+	at org.eclipse.pde.internal.core.PluginModelManager.findModel(PluginModelManager.java:874)
+	at org.eclipse.pde.core.plugin.PluginRegistry.findModel(PluginRegistry.java:110)
+	at com.tibco.zion.dc.util.ProjectHelper.isZionApplicationProject(ProjectHelper.java:72)
+	at com.tibco.bw.core.design.project.explorer.EditionDecorator.decorate(EditionDecorator.java:24)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:267)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Contains: Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\config\drivers\shells\jdbc.oracle.runtime\hotfix\runtime\plugins
+Contains: Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\system\hotfix\lib\common
+!SUBENTRY 1 org.eclipse.pde.core 4 0 2019-07-30 20:25:59.564
+!MESSAGE Problems occurred getting the plug-ins in this container
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2019-07-30 20:25:59.564
+!MESSAGE Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\config\drivers\shells\jdbc.oracle.runtime\hotfix\runtime\plugins
+!SUBENTRY 2 org.eclipse.pde.core 4 0 2019-07-30 20:25:59.564
+!MESSAGE Directory does not exist: C:\Program Files\tibco\bw6\bw\6.5\system\hotfix\lib\common
+
+!ENTRY com.tibco.xpd.fragments 4 0 2019-07-30 20:26:08.827
+!MESSAGE com.tibco.xpd.fragments.internal.FragmentsManager$5.run(FragmentsManager.java:787) FragmentsManager.initialize(): No root categories found!!!
+
+!ENTRY org.eclipse.ui.workbench 4 2 2019-07-30 20:26:09.060
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalStateException: Profile not locked due to exception: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.lock (Access is denied)
+	at org.eclipse.equinox.internal.p2.engine.ProfileLock.lock(ProfileLock.java:106)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:529)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:365)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:249)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:179)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:89)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2019-07-30 20:26:09.065
+!MESSAGE Unhandled Exception
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk.scheduler 4 0 2019-07-30 20:26:09.066
+!MESSAGE Unable to execute early startup code for an extension
+!STACK 0
+java.lang.IllegalStateException: Profile not locked due to exception: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.lock (Access is denied)
+	at org.eclipse.equinox.internal.p2.engine.ProfileLock.lock(ProfileLock.java:106)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.restore(SimpleProfileRegistry.java:529)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileMap(SimpleProfileRegistry.java:365)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:249)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:179)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:88)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:89)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.preferences 4 4 2019-07-30 20:26:09.519
+!MESSAGE Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.scheduler.prefs.
+!STACK 0
+java.io.FileNotFoundException: C:\Program Files\tibco\bw6\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.engine\profileRegistry\TIBCOBusinessStudio-4.0.profile\.data\.settings\org.eclipse.equinox.p2.ui.sdk.scheduler.prefs (Access is denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.preferences.SafeFileOutputStream.<init>(SafeFileOutputStream.java:43)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:317)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2019-07-30 20:26:09.521
+!MESSAGE Exception saving profile preferences
+!STACK 0
+org.osgi.service.prefs.BackingStoreException: Exception saving preferences to: C:/Program Files/tibco/bw6/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.engine/profileRegistry/TIBCOBusinessStudio-4.0.profile/.data/.settings/org.eclipse.equinox.p2.ui.sdk.scheduler.prefs.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.write(EclipsePreferences.java:323)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.save(EclipsePreferences.java:1135)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.doSave(ProfilePreferences.java:137)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences$SaveJob.run(ProfilePreferences.java:49)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:26:17.042
+!MESSAGE Failed to connect to the server at tcp://localhost:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://localhost:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 2 2 2019-07-30 20:26:33.978
+!MESSAGE Invalid preference category path: tibco.preference.category.soa_platform (bundle: com.tibco.amf.tools.composite.editor, page: com.tibco.amf.sca.model.composite.diagram.general)
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:33:08.753
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.HasOneStoreConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:33:08.753
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyAliasNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:33:08.754
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.subject.editor.com.tibco.trinity.identity.subject.editor.validation.KeyPasswordNotNullConstraint" could not find target EMF type "SubjectConfiguration."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:33:08.754
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.identity.trust.editor.constraint" could not find target EMF type "TrustConfiguration."
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:33:21.265
+!MESSAGE Failed to connect to the server at tcp://<localhost>:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://<localhost>:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY com.tibco.bw.sharedresource.jms.design 4 0 2019-07-30 20:33:30.989
+!MESSAGE Failed to connect to the server at tcp://<localhost>:7222
+!STACK 0
+javax.jms.JMSException: Failed to connect to the server at tcp://<localhost>:7222
+	at com.tibco.tibjms.TibjmsxLinkTcp._createSocket(TibjmsxLinkTcp.java:823)
+	at com.tibco.tibjms.TibjmsxLinkTcp.connect(TibjmsxLinkTcp.java:914)
+	at com.tibco.tibjms.TibjmsConnection._create(TibjmsConnection.java:1359)
+	at com.tibco.tibjms.TibjmsConnection.<init>(TibjmsConnection.java:4333)
+	at com.tibco.tibjms.TibjmsQueueConnection.<init>(TibjmsQueueConnection.java:39)
+	at com.tibco.tibjms.TibjmsxCFImpl._createImpl(TibjmsxCFImpl.java:200)
+	at com.tibco.tibjms.TibjmsxCFImpl._createConnection(TibjmsxCFImpl.java:253)
+	at com.tibco.tibjms.TibjmsConnectionFactory.createConnection(TibjmsConnectionFactory.java:39)
+	at com.tibco.bw.sharedresource.jms.design.DirectConnectionTester.testDirectConnectionFactory(DirectConnectionTester.java:167)
+	at com.tibco.bw.sharedresource.jms.design.connectionfactory.newimpl.JMSConnectionFactorySection$5.widgetSelected(JMSConnectionFactorySection.java:792)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.bpel.validator 1 0 2019-07-30 20:34:19.710
+!MESSAGE Validator Startup 51ms
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:35:49.541
+!MESSAGE Constraint "com.tibco.amf.design.sr.core.internal.validation.constraints.SharedResourceNotInWorkspace" could not find target EMF type "Property."
+
+!ENTRY org.eclipse.emf.validation 2 70 2019-07-30 20:36:03.990
+!MESSAGE Constraint "com.tibco.bw.sharedresource.trinity.ssl.editor.com.tibco.trinity.ssl.editor.invalid.remote.host.constraint" could not find target EMF type "SSLServerConfiguration."
+
+!ENTRY org.eclipse.ui 4 0 2019-07-30 21:03:32.780
+!MESSAGE Unhandled event loop exception
+!STACK 0
+com.tibco.xml.xmodel.VocalRuntimeException
+	at com.tibco.xml.mapperui.ops.RemoveMappingOperation.<init>(RemoveMappingOperation.java:24)
+	at com.tibco.xml.mapperui.tabs.TargetTreePanel.ô00000(TargetTreePanel.java:1935)
+	at com.tibco.xml.mapperui.tabs.TargetTreePanel.access$29(TargetTreePanel.java:1920)
+	at com.tibco.xml.mapperui.tabs.TargetTreePanel$46.focusLost(TargetTreePanel.java:1769)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:143)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Control.sendFocusEvent(Control.java:2841)
+	at org.eclipse.swt.widgets.Widget.wmKillFocus(Widget.java:1943)
+	at org.eclipse.swt.widgets.Control.WM_KILLFOCUS(Control.java:4983)
+	at org.eclipse.swt.widgets.Canvas.WM_KILLFOCUS(Canvas.java:442)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4644)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5036)
+	at org.eclipse.swt.internal.win32.OS.SetFocus(Native Method)
+	at org.eclipse.swt.widgets.Tree.WM_LBUTTONDOWN(Tree.java:6703)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4646)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:6024)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2549)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3759)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.debug.ui 4 0 2019-07-30 21:06:45.416
+!MESSAGE Launch shortcut 'com.tibco.bw.core.design.project.runBWApplicationLaunchShortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property com.tibco.bw.core.design.project.launch.matchResource to type class org.eclipse.ui.part.FileEditorInput
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:123)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:96)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.isApplicable(LaunchShortcutsAction.java:261)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.fillMenu(LaunchShortcutsAction.java:170)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.access$0(LaunchShortcutsAction.java:161)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction$2.menuShown(LaunchShortcutsAction.java:278)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4963)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4639)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3755)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2019-07-30 21:06:45.416
+!MESSAGE No property tester contributes a property com.tibco.bw.core.design.project.launch.matchResource to type class org.eclipse.ui.part.FileEditorInput
+
+!ENTRY org.eclipse.debug.ui 4 0 2019-07-30 21:06:45.417
+!MESSAGE Launch shortcut 'com.tibco.bw.core.design.project.debugBWApplicationLaunchShortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property com.tibco.bw.core.design.project.launch.matchResource to type class org.eclipse.ui.part.FileEditorInput
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:123)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:96)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:150)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:53)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.isApplicable(LaunchShortcutsAction.java:261)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.fillMenu(LaunchShortcutsAction.java:170)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction.access$0(LaunchShortcutsAction.java:161)
+	at org.eclipse.debug.ui.actions.LaunchShortcutsAction$2.menuShown(LaunchShortcutsAction.java:278)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.jface.action.ActionContributionItem.copyMenu(ActionContributionItem.java:1276)
+	at org.eclipse.jface.action.ActionContributionItem.handleShowProxy(ActionContributionItem.java:1256)
+	at org.eclipse.jface.action.ActionContributionItem.access$4(ActionContributionItem.java:1245)
+	at org.eclipse.jface.action.ActionContributionItem$8.handleEvent(ActionContributionItem.java:1218)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4963)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4639)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:339)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1626)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2075)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4213)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3755)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2019-07-30 21:06:45.417
+!MESSAGE No property tester contributes a property com.tibco.bw.core.design.project.launch.matchResource to type class org.eclipse.ui.part.FileEditorInput
+
+!ENTRY org.eclipse.jface 4 0 2019-07-31 10:26:00.107
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:175)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:390)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:527)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:284)
+	at org.eclipse.ui.internal.progress.ProgressManager$3.run(ProgressManager.java:983)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:1018)
+	at org.eclipse.ui.internal.progress.ProgressManager.busyCursorWhile(ProgressManager.java:993)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.createSchema(XSDModelAdapter.java:135)
+	at org.eclipse.wst.xsd.ui.internal.text.XSDModelAdapter.lookupOrCreateSchema(XSDModelAdapter.java:213)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.buildModel(InternalXSDMultiPageEditor.java:247)
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor.createPages(ADTMultiPageEditor.java:173)
+	at org.eclipse.wst.xsd.ui.internal.editor.InternalXSDMultiPageEditor.createPages(InternalXSDMultiPageEditor.java:568)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:362)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:141)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:99)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:327)
+	at sun.reflect.GeneratedMethodAccessor123.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:888)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:869)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:120)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:337)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:258)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:104)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:73)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:55)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:127)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:983)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:766)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:737)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:731)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:715)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl$1.handleEvent(PartServiceImpl.java:94)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:187)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:156)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4734)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:218)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:36)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:59)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:171)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer$10.widgetSelected(StackRenderer.java:1034)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1085)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1070)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:782)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3110)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1794)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:283)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4353)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4172)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3761)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.wst.xsd.ui.internal.adt.editor.ADTMultiPageEditor$InternalLayout.layout(ADTMultiPageEditor.java:90)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1290)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1297)
+	at org.eclipse.swt.widgets.Composite.updateLayout(Composite.java:1276)
+	at org.eclipse.swt.widgets.Composite.layout(Composite.java:665)
+	at org.eclipse.swt.custom.CTabFolder.runUpdate(CTabFolder.java:3755)
+	at org.eclipse.swt.custom.CTabFolder$10.run(CTabFolder.java:3741)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 96 more
+
+!ENTRY org.eclipse.ui 4 4 2019-07-31 10:28:02.908
+!MESSAGE Exception in org.eclipse.ui.model.WorkbenchPartLabelProvider.getImage: org.eclipse.jface.resource.DeviceResourceException: Unable to create resource com.tibco.xpd.resources.util.WorkingCopyUtil$1@6d872084
+
+!ENTRY org.eclipse.ui 4 4 2019-07-31 10:28:02.909
+!MESSAGE Exception in org.eclipse.ui.model.WorkbenchPartLabelProvider.getImage: org.eclipse.jface.resource.DeviceResourceException: Unable to create resource com.tibco.xpd.resources.util.WorkingCopyUtil$1@6d872084
+!STACK 0
+org.eclipse.jface.resource.DeviceResourceException: Unable to create resource com.tibco.xpd.resources.util.WorkingCopyUtil$1@6d872084
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:169)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:58)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:89)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:85)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:89)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.ui.model.WorkbenchPartLabelProvider.getImage(WorkbenchPartLabelProvider.java:68)
+	at org.eclipse.ui.model.WorkbenchPartLabelProvider.getColumnImage(WorkbenchPartLabelProvider.java:110)
+	at org.eclipse.jface.viewers.TableColumnViewerLabelProvider.update(TableColumnViewerLabelProvider.java:67)
+	at org.eclipse.jface.viewers.ViewerColumn.refresh(ViewerColumn.java:154)
+	at org.eclipse.jface.viewers.AbstractTableViewer.doUpdateItem(AbstractTableViewer.java:385)
+	at org.eclipse.jface.viewers.CheckboxTableViewer.doUpdateItem(CheckboxTableViewer.java:169)
+	at org.eclipse.jface.viewers.StructuredViewer$UpdateItemSafeRunnable.run(StructuredViewer.java:472)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:50)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:178)
+	at org.eclipse.jface.viewers.StructuredViewer.updateItem(StructuredViewer.java:2150)
+	at org.eclipse.jface.viewers.AbstractTableViewer.createItem(AbstractTableViewer.java:276)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefreshAll(AbstractTableViewer.java:723)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:615)
+	at org.eclipse.jface.viewers.AbstractTableViewer.internalRefresh(AbstractTableViewer.java:607)
+	at org.eclipse.jface.viewers.AbstractTableViewer$1.run(AbstractTableViewer.java:567)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1436)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1397)
+	at org.eclipse.jface.viewers.CheckboxTableViewer.preservingSelection(CheckboxTableViewer.java:344)
+	at org.eclipse.jface.viewers.AbstractTableViewer.inputChanged(AbstractTableViewer.java:564)
+	at org.eclipse.jface.viewers.ContentViewer.setInput(ContentViewer.java:292)
+	at org.eclipse.jface.viewers.StructuredViewer.setInput(StructuredViewer.java:1675)
+	at org.eclipse.ui.dialogs.ListSelectionDialog.initializeViewer(ListSelectionDialog.java:211)
+	at org.eclipse.ui.dialogs.ListSelectionDialog.createDialogArea(ListSelectionDialog.java:186)
+	at org.eclipse.jface.dialogs.Dialog.createContents(Dialog.java:768)
+	at org.eclipse.jface.window.Window.create(Window.java:435)
+	at org.eclipse.jface.dialogs.Dialog.create(Dialog.java:1101)
+	at org.eclipse.jface.window.Window.open(Window.java:797)
+	at org.eclipse.ui.internal.WorkbenchPage.saveAll(WorkbenchPage.java:3735)
+	at org.eclipse.ui.internal.WorkbenchPage.saveAllEditors(WorkbenchPage.java:3572)
+	at org.eclipse.ui.internal.Workbench.saveAllEditors(Workbench.java:1367)
+	at org.eclipse.ui.internal.Workbench.saveAllEditors(Workbench.java:1360)
+	at com.tibco.bw.core.design.debug.ui.launching.BWStandaloneLaunchDelegate$5.run(BWStandaloneLaunchDelegate.java:379)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:167)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:165)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+
+!ENTRY org.eclipse.ui 4 0 2019-07-31 10:28:45.802
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalArgumentException: Argument not valid)
+	at org.eclipse.swt.SWT.error(SWT.java:4441)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:139)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4147)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3764)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1032)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:148)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:579)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:135)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:648)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:603)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1465)
+Caused by: java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4422)
+	at org.eclipse.swt.SWT.error(SWT.java:4356)
+	at org.eclipse.swt.SWT.error(SWT.java:4327)
+	at org.eclipse.swt.graphics.GC.setFont(GC.java:4404)
+	at org.eclipse.gmf.runtime.draw2d.ui.text.TextUtilitiesEx.getGC(TextUtilitiesEx.java:150)
+	at org.eclipse.gmf.runtime.draw2d.ui.text.TextUtilitiesEx.getTextDimension(TextUtilitiesEx.java:91)
+	at org.eclipse.gmf.runtime.draw2d.ui.text.TextUtilitiesEx.getTextExtents(TextUtilitiesEx.java:76)
+	at org.eclipse.gmf.runtime.draw2d.ui.text.TruncatedSingleLineTextLayout.layout(TruncatedSingleLineTextLayout.java:70)
+	at org.eclipse.draw2d.text.FlowFigureLayout.layout(FlowFigureLayout.java:111)
+	at org.eclipse.draw2d.Figure.layout(Figure.java:1093)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1896)
+	at org.eclipse.draw2d.text.FlowContainerLayout.layoutChildren(FlowContainerLayout.java:114)
+	at org.eclipse.draw2d.text.FlowContainerLayout.layout(FlowContainerLayout.java:100)
+	at org.eclipse.draw2d.text.FlowFigureLayout.layout(FlowFigureLayout.java:111)
+	at org.eclipse.draw2d.Figure.layout(Figure.java:1093)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1896)
+	at org.eclipse.draw2d.text.BlockFlow.validate(BlockFlow.java:314)
+	at org.eclipse.draw2d.text.FlowPage.validate(FlowPage.java:150)
+	at org.eclipse.draw2d.text.FlowPage.getPreferredSize(FlowPage.java:85)
+	at org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel.getPreferredSize(WrappingLabel.java:972)
+	at com.tibco.bw.core.design.figure.ReferenceFigure$ReferenceFigureLayout.layout(ReferenceFigure.java:84)
+	at com.tibco.bw.core.design.figure.ReferenceFigure.refreshFigure(ReferenceFigure.java:499)
+	at com.tibco.bw.core.design.process.editor.diagram.edit.parts.ReferenceEditPart.refreshVisuals(ReferenceEditPart.java:465)
+	at org.eclipse.gef.editparts.AbstractEditPart.refresh(AbstractEditPart.java:725)
+	at org.eclipse.gef.editparts.AbstractGraphicalEditPart.refresh(AbstractGraphicalEditPart.java:644)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.access$3(GraphicalEditPart.java:1)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart$3.run(GraphicalEditPart.java:861)
+	at org.eclipse.emf.transaction.impl.TransactionalEditingDomainImpl.runExclusive(TransactionalEditingDomainImpl.java:328)
+	at org.eclipse.gmf.runtime.diagram.ui.editparts.GraphicalEditPart.refresh(GraphicalEditPart.java:851)
+	at com.tibco.bw.core.design.process.editor.ext.util.BWDiagramUtil.doRefreshReferenceOperationEditParts(BWDiagramUtil.java:3736)
+	at com.tibco.bw.core.design.process.editor.ext.util.BWDiagramUtil$RefreshReferenceOperationRunnable$1.run(BWDiagramUtil.java:3644)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	... 23 more

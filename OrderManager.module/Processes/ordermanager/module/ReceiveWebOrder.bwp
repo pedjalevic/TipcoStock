@@ -11,6 +11,8 @@
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+10ff712a-55b1-46a7-8afb-8e3e3e382da7"
     xmlns:ns4="http://www.tibco.com/pe/WriteToLogActivitySchema"
     xmlns:ns5="http://tns.tibco.com/bw/activity/timer/xsd/output"
+    xmlns:ns6="http://xmlns.example.com/20190730153118"
+    xmlns:ns7="http://tns.tibco.com/bw/palette/internal/activityerror+3df1f272-84a4-4570-ac1c-e8b3b6bb1033"
     xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912"
     xmlns:sca-bpel="http://docs.oasis-open.org/ns/opencsa/sca-bpel/200801"
     xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"
@@ -226,18 +228,38 @@
             </xs:complexType>
             <xs:element name="TimerOutputSchema" type="tns:TimerOutputSchemaType"/>
         </xs:schema>
+        <schema elementFormDefault="unqualified"
+            targetNamespace="http://tns.tibco.com/bw/palette/internal/activityerror+3df1f272-84a4-4570-ac1c-e8b3b6bb1033"
+            xmlns="http://www.w3.org/2001/XMLSchema"
+            xmlns:Q1="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"
+            xmlns:Q2="http://xmlns.example.com/20190730153118" xmlns:tns="http://tns.tibco.com/bw/palette/internal/activityerror+3df1f272-84a4-4570-ac1c-e8b3b6bb1033">
+            <import namespace="http://xmlns.example.com/20190730153118" schemaLocation="../../../Service%20Descriptors/CheckCashAccountService.wsdl"/>
+            <import namespace="http://schemas.tibco.com/bw/pe/plugin/5.0/exceptions"/>
+            <element name="ActivityErrorData" type="tns:ActivityErrorDataType"/>
+            <complexType name="ActivityErrorDataType">
+                <choice>
+                    <element maxOccurs="1" minOccurs="0" ref="Q1:ActivityTimedOutException"/>
+                    <element maxOccurs="1" minOccurs="1" ref="Q2:operationFault"/>
+                </choice>
+            </complexType>
+        </schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20190729115351PLT"
             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
             xmlns:ptyp="http://xmlns.example.com/20190729163840"
             xmlns:ptyp1="http://xmlns.example.com/20190729131414"
+            xmlns:ptyp2="http://xmlns.example.com/20190730153118"
             xmlns:tns="http://xmlns.example.com/20190729115351PLT"
             xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <plnk:partnerLinkType name="partnerLinkType1">
                 <plnk:role name="use" portType="ptyp1:Service"/>
             </plnk:partnerLinkType>
+            <plnk:partnerLinkType name="partnerLinkType">
+                <plnk:role name="use" portType="ptyp2:Service"/>
+            </plnk:partnerLinkType>
             <wsdl:import namespace="http://xmlns.example.com/20190729131414"/>
+            <wsdl:import namespace="http://xmlns.example.com/20190730153118"/>
         </wsdl:definitions>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="Asus"
@@ -343,7 +365,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="224"
+                                    <layoutConstraint x="311"
                                     xsi:type="notation:Bounds" y="42"/>
                                     </children>
                                     <children type="4002 bw.generalactivities.timer">
@@ -381,6 +403,41 @@
                                     <layoutConstraint
                                     height="40" width="40"
                                     x="3"
+                                    xsi:type="notation:Bounds" y="42"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.3"/>
+                                    <layoutConstraint x="216"
                                     xsi:type="notation:Bounds" y="42"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -430,17 +487,6 @@
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
         <edges
-            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
-            <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
-            </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
-            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
-            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
-        </edges>
-        <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
             <children type="6002">
@@ -448,8 +494,30 @@
             </children>
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
-            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[25, -1, -71, 0]$[72, 0, -24, 1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[25, -6, -58, 0]$[59, 0, -24, 6]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.3"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.2"/>
+            <bendpoints points="[25, 0, -70, 0]$[71, 0, -24, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -461,7 +529,13 @@
             namespace="http://www.tibco.com/pe/WriteToLogActivitySchema" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply" prefix="ns1"/>
+        <tibex:namespaceItem
+            namespace="http://xmlns.example.com/20190729131414" prefix="tns2"/>
     </tibex:NamespaceRegistry>
+    <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
+        location="../../../Service%20Descriptors/CheckCashAccountService.wsdl" namespace="http://xmlns.example.com/20190730153118"/>
     <bpws:import importType="http://schemas.xmlsoap.org/wsdl/"
         location="../../../Service%20Descriptors/CheckSecurityAccountService.wsdl" namespace="http://xmlns.example.com/20190729131414"/>
     <bpws:partnerLinks>
@@ -472,6 +546,13 @@
             <tibex:ReferenceWire dynamic="false" inline="false"
                 processConfigurationName=""
                 processName="ordermanager.module.CheckSecurityAccount" serviceName="CheckSecurityAccount"/>
+        </bpws:partnerLink>
+        <bpws:partnerLink name="CheckCashAccount"
+            partnerLinkType="ns0:partnerLinkType" partnerRole="use"
+            sca-bpel:ignore="true" sca-bpel:reference="CheckCashAccount" sca-bpel:wiredByImpl="false">
+            <tibex:ReferenceWire dynamic="false" inline="false"
+                processConfigurationName=""
+                processName="ordermanager.module.CheckCashAccount" serviceName="CheckCashAccount"/>
         </bpws:partnerLink>
     </bpws:partnerLinks>
     <bpws:variables>
@@ -486,6 +567,11 @@
         <bpws:variable element="ns:ErrorReport" name="_error" sca-bpel:internal="true"/>
         <bpws:variable element="ns4:ActivityInput" name="Log-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:TimerOutputSchema" name="Timer" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns6:operationRequest"
+            name="Invoke-input" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns6:operationResponse" name="Invoke" sca-bpel:internal="true"/>
+        <bpws:variable element="ns7:ActivityErrorData"
+            name="_error_Invoke" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -498,8 +584,9 @@
     <bpws:scope name="scope">
         <bpws:flow name="flow">
             <bpws:links>
-                <bpws:link name="InvokeToLog" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TimerToInvoke" tibex:linkType="SUCCESS"/>
+                <bpws:link name="InvokeCheckSecurityToInvoke" tibex:linkType="SUCCESS"/>
+                <bpws:link name="InvokeToLog" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:invoke inputVariable="InvokeCheckSecurity-input"
                 name="InvokeCheckSecurity" operation="csa"
@@ -534,12 +621,12 @@
                     <bpws:target linkName="TimerToInvoke"/>
                 </bpws:targets>
                 <bpws:sources>
-                    <bpws:source linkName="InvokeToLog"/>
+                    <bpws:source linkName="InvokeCheckSecurityToInvoke"/>
                 </bpws:sources>
             </bpws:invoke>
             <bpws:extensionActivity>
                 <tibex:activityExtension
-                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190729131414&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;InvokeCheckSecurity&quot;/>&#xa;    &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ActivityInput>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$InvokeCheckSecurity/parameters/tns2:operationResponse/result&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns1:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190729131414&quot; xmlns:tns=&quot;http://xmlns.example.com/20190730153118&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Invoke&quot;/>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns1:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;$Invoke/parameters/tns:operationResponse/Result&quot;/>&lt;/message>&lt;/tns1:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                     inputVariable="Log-input" name="Log"
                     tibex:xpdlId="2bfb3627-2a31-4d8a-8414-153379b87d24" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
@@ -548,7 +635,7 @@
                     </bpws:targets>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190729131414&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;InvokeCheckSecurity.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ActivityInput>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$InvokeCheckSecurity.parameters/result&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns1:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190729131414&quot; xmlns:tns=&quot;http://xmlns.example.com/20190730153118&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;Invoke.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:ActivityInput>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$Invoke.parameters/Result&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns1:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -600,6 +687,44 @@
                     </tibex:eventSource>
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
+            <bpws:invoke inputVariable="Invoke-input" name="Invoke"
+                operation="cca" outputVariable="Invoke"
+                partnerLink="CheckCashAccount" portType="ns6:Service" tibex:xpdlId="3df1f272-84a4-4570-ac1c-e8b3b6bb1033">
+                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns3="http://xmlns.example.com/20190730153118" xmlns:ns="http://www.tibco-bw.org/StockMarketInterface/mktOrder" xmlns:ns1="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply" version="2.0"&gt;
+    &lt;xsl:template name="Invoke-input" match="/"&gt;
+        &lt;tns3:operationRequest&gt;
+            &lt;parameters&gt;
+                &lt;tns3:operationRequest&gt;
+                    &lt;ns:custId&gt;
+                        &lt;xsl:value-of select="'jdoe'"/&gt;
+                    &lt;/ns:custId&gt;
+                    &lt;ns:volume&gt;
+                        &lt;xsl:value-of select="1"/&gt;
+                    &lt;/ns:volume&gt;
+                    &lt;ns:secCode&gt;
+                        &lt;xsl:value-of select="'TIBX.O'"/&gt;
+                    &lt;/ns:secCode&gt;
+                    &lt;ns1:ccy&gt;
+                        &lt;xsl:value-of select="'EUR'"/&gt;
+                    &lt;/ns1:ccy&gt;
+                &lt;/tns3:operationRequest&gt;
+            &lt;/parameters&gt;
+        &lt;/tns3:operationRequest&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                <tibex:inputBindings>
+                    <tibex:partBinding
+                        expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;http://xmlns.example.com/20190730153118&quot; xmlns:ns=&quot;http://www.tibco-bw.org/StockMarketInterface/mktOrder&quot; xmlns:ns1=&quot;http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;Invoke-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:operationRequest>&#xa;            &lt;ns:custId>&#xa;                &lt;xsl:value-of select=&quot;'jdoe'&quot;/>&#xa;            &lt;/ns:custId>&#xa;            &lt;ns:volume>&#xa;                &lt;xsl:value-of select=&quot;1&quot;/>&#xa;            &lt;/ns:volume>&#xa;            &lt;ns:secCode>&#xa;                &lt;xsl:value-of select=&quot;'TIBX.O'&quot;/>&#xa;            &lt;/ns:secCode>&#xa;            &lt;ns1:ccy>&#xa;                &lt;xsl:value-of select=&quot;'EUR'&quot;/>&#xa;            &lt;/ns1:ccy>&#xa;        &lt;/tns3:operationRequest>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                </tibex:inputBindings>
+                <bpws:targets>
+                    <bpws:target linkName="InvokeCheckSecurityToInvoke"/>
+                </bpws:targets>
+                <bpws:sources>
+                    <bpws:source linkName="InvokeToLog"/>
+                </bpws:sources>
+                <bpws:correlations/>
+            </bpws:invoke>
         </bpws:flow>
     </bpws:scope>
 </bpws:process>

@@ -1,0 +1,5 @@
+1564494291162	Rename resource 'Process.bwp'
+1564511696918	Rename Module Configuration Property Group from 'newGroup' to 'Service'
+1564511708882	Rename Module Configuration Property Group from 'Service' to 'Services'
+1564511719064	Rename Module Configuration Property from '/Service/newProperty' to 'DestinationName'
+1564511736382	Rename Module Configuration Property from '/Service/newProperty1' to 'DestinationNameResponse'
