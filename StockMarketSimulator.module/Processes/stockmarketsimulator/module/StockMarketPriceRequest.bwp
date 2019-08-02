@@ -1301,14 +1301,17 @@
             namespace="http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest" prefix="ns1"/>
         <tibex:namespaceItem
             namespace="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply" prefix="ns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.tibco-bw.org/StockMarketInterface/mktOrder" prefix="ns3"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco-bw.org/StockMarketInterface/mktOrder"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable element="ns1:ActivityOutput"
-            name="JMSReceivePrice" sca-bpel:internal="true"/>
+            name="JMSReceiveCode" sca-bpel:internal="true"/>
         <bpws:variable name="jmsConnection" sca-bpel:hotUpdate="false"
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/jms}JMSConnectionFactory" type="xsd:string">
@@ -1322,7 +1325,7 @@
             sca-bpel:privateProperty="true" sca-bpel:property="yes"
             sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc}JdbcDataSource" type="xsd:string">
             <bpws:from>
-                <bpws:literal>stockmarketsimulator.module.JDBCConnectionResource2</bpws:literal>
+                <bpws:literal>stockmarketsimulator.module.JDBCConnectionResourcees</bpws:literal>
             </bpws:from>
         </bpws:variable>
         <bpws:variable element="ns3:jdbcQueryActivityInput"
@@ -1365,9 +1368,9 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="60" name="JMSReceivePrice"
+                    eventTimeout="60" name="JMSReceiveCode"
                     tibex:xpdlId="0106c446-888e-452b-b6a6-d816ae98dc70"
-                    variable="JMSReceivePrice" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    variable="JMSReceiveCode" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:sources>
                         <bpws:source linkName="JMSReceiveMessageToLog"/>
                     </bpws:sources>
@@ -1411,7 +1414,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:ns1=&quot;http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JMSReceivePrice&quot;/>&#xa;    &lt;xsl:template name=&quot;LogRequest-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ActivityInput>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$JMSReceivePrice/Body/ns1:stockPriceRequest/ns1:secCode&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:ns3=&quot;http://www.tibco-bw.org/StockMarketInterface/mktOrder&quot; xmlns:ns1=&quot;http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JMSReceiveCode&quot;/>&lt;xsl:template name=&quot;LogRequest-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;$JMSReceiveCode/Body/ns1:stockPriceRequest/ns1:secCode&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1444,7 +1447,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d1dffe7-d55d-424a-90ae-5e5e28a1eaaf+input&quot; xmlns:ns1=&quot;http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;JMSReceivePrice&quot;/>&#xa;    &lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns2:jdbcQueryActivityInput>&#xa;            &lt;ParameterSC>&#xa;                &lt;xsl:value-of select=&quot;$JMSReceivePrice/Body/ns1:stockPriceRequest/ns1:secCode&quot;/>&#xa;            &lt;/ParameterSC>&#xa;        &lt;/tns2:jdbcQueryActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://www.tibco.com/namespaces/tnt/plugins/jdbc+9d1dffe7-d55d-424a-90ae-5e5e28a1eaaf+input&quot; xmlns:ns3=&quot;http://www.tibco-bw.org/StockMarketInterface/mktOrder&quot; xmlns:ns1=&quot;http://www.tibco-bw.org/StockMarketInterface/StockPriceRequest&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JMSReceiveCode&quot;/>&lt;xsl:template name=&quot;JDBCQuery-input&quot; match=&quot;/&quot;>&lt;tns2:jdbcQueryActivityInput>&lt;ParameterSC>&lt;xsl:value-of select=&quot;$JMSReceiveCode/Body/ns1:stockPriceRequest/ns1:secCode&quot;/>&lt;/ParameterSC>&lt;/tns2:jdbcQueryActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -1457,7 +1460,7 @@
                                     <type href="http://ns.tibco.com/bw/palette/jdbc#//JDBCQueryActivity"/>
                                     <value maxRows="100"
                                     sharedResourceProperty="jdbcProperty"
-                                    sqlStatement="SELECT SEC_LAST_PRC, SEC_CCY&#xa;  FROM MKTSIM.SEC_DEF A&#xa;  WHERE SEC_CODE LIKE ?&#xa;"
+                                    sqlStatement="SELECT SEC_LAST_PRC, SEC_CCY&#xa;  FROM SEC_DEF A&#xa;  WHERE SEC_CODE LIKE ?&#xa;"
                                     timeout="10" xsi:type="jdbcPalette:JDBCQueryActivity">
                                     <PreparedParameters
                                     DataType="12"
@@ -1488,7 +1491,7 @@
                     </bpws:sources>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jms+0a5f0743-a250-4bd1-8db8-d1f56a29c124+input&quot; xmlns:ns2=&quot;http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;JMSSendPrice-input&quot; match=&quot;/&quot;>&lt;tns1:ActivityInput>&lt;Body>&lt;ns2:stockPriceReply>&lt;xsl:if test=&quot;$JDBCQuery/Record[2]/SEC_CCY&quot;>&lt;ns2:ccy>&lt;xsl:value-of select=&quot;$JDBCQuery/Record[2]/SEC_CCY&quot;/>&lt;/ns2:ccy>&lt;/xsl:if>&lt;xsl:if test=&quot;$JDBCQuery/Record[1]/SEC_LAST_PRC&quot;>&lt;ns2:lastPrc>&lt;xsl:value-of select=&quot;$JDBCQuery/Record[1]/SEC_LAST_PRC&quot;/>&lt;/ns2:lastPrc>&lt;/xsl:if>&lt;ns2:replyStatus>&lt;xsl:value-of select=&quot;200&quot;/>&lt;/ns2:replyStatus>&lt;/ns2:stockPriceReply>&lt;/Body>&lt;/tns1:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns1=&quot;http://www.tibco.com/namespaces/tnt/plugins/jms+0a5f0743-a250-4bd1-8db8-d1f56a29c124+input&quot; xmlns:ns2=&quot;http://www.tibco-bw.org/StockMarketInterfacer/StockPriceReply&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;JDBCQuery&quot;/>&lt;xsl:template name=&quot;JMSSendPrice-input&quot; match=&quot;/&quot;>&lt;tns1:ActivityInput>&lt;Body>&lt;ns2:stockPriceReply>&lt;xsl:if test=&quot;$JDBCQuery/Record[1]/SEC_CCY&quot;>&lt;ns2:ccy>&lt;xsl:value-of select=&quot;$JDBCQuery/Record[1]/SEC_CCY&quot;/>&lt;/ns2:ccy>&lt;/xsl:if>&lt;xsl:if test=&quot;$JDBCQuery/Record[1]/SEC_LAST_PRC&quot;>&lt;ns2:lastPrc>&lt;xsl:value-of select=&quot;$JDBCQuery/Record[1]/SEC_LAST_PRC&quot;/>&lt;/ns2:lastPrc>&lt;/xsl:if>&lt;ns2:replyStatus>&lt;xsl:value-of select=&quot;200&quot;/>&lt;/ns2:replyStatus>&lt;/ns2:stockPriceReply>&lt;/Body>&lt;/tns1:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.jms.send"

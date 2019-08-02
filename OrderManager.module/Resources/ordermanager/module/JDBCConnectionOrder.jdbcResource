@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_IgS68LH1EemTo_2ePwMnwQ" name="ordermanager.module.JDBCConnectionOrder" type="jdbc:JdbcDataSource">
   <jndi:reference xmi:id="_Igd6ELH1EemTo_2ePwMnwQ" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
-  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_Igd6EbH1EemTo_2ePwMnwQ" username="system" password="#!yMFPHXWzWLGh0baIITdpc3HL0uwa4UTZ">
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_Igd6EbH1EemTo_2ePwMnwQ" username="OM" password="#!yMFPHXWzWLGh0baIITdpc3HL0uwa4UTZ">
     <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_IgfvQLH1EemTo_2ePwMnwQ" jdbcDriver="oracle.jdbc.OracleDriver" dbURL="jdbc:oracle:thin:@localhost:1521:XE"/>
-    <connectionProperties xmi:id="_KiFzkLH1EemTo_2ePwMnwQ" key="jarFile" value="ojdbc"/>
+    <connectionProperties xmi:id="_R-09oLQ0Eemd6o7Pkp2hQA" key="jarFile" value="ojdbc"/>
   </jndi:configuration>
 </jndi:namedResource>

@@ -6,3 +6,5 @@
 1564492841401	Delete resource 'OrderManager.module/Service Descriptors/CheckCashAccountService1.wsdl'
 1564493383421	Delete 2 resources
 1564493429688	Delete 2 resources
+1564601620317	Delete resource 'StockMarketSimulator.module/Resources/stockmarketsimulator/module/ThreadPoolResource.threadPoolResource'
+1564605685085	Delete resource 'StockMarketSimulator.module/Resources/stockmarketsimulator/module/JDBCConnectionResource3.jdbcResource'

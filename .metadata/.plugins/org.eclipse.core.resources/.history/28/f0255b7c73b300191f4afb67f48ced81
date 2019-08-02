@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/orderCustomerSchema" xmlns:tns="http://www.example.org/orderCustomerSchema" elementFormDefault="qualified">
+
+    <complexType name="orderCustomerSchemaType">
+    	<sequence>
+    		<element name="volume" type="integer"></element>
+    		<element name="ccy" type="string"></element>
+    		<element name="buySell" type="string"></element>
+    		<element name="secCode" type="string"></element>
+    		<element name="NewElement4" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

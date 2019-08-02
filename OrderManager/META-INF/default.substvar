@@ -74,6 +74,22 @@
 			<isOverride>false</isOverride>
 		</globalVariable>
 		<globalVariable>
+			<name>//OrderManager.module//ContextPathProperty</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//OrderManager.module//ContextPathProperty1</name>
+			<value></value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
 			<name>//OrderManager.module///Services/DestinationName</name>
 			<value>request.message.topic</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -84,6 +100,22 @@
 		<globalVariable>
 			<name>//OrderManager.module///Services/DestinationNameRespons</name>
 			<value>respons.message.topic</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//OrderManager.module///Services1/DestinationNameReq</name>
+			<value>request.message.queue</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<isOverride>false</isOverride>
+		</globalVariable>
+		<globalVariable>
+			<name>//OrderManager.module///Services1/DestinationNameRes</name>
+			<value>respons.message.queue</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

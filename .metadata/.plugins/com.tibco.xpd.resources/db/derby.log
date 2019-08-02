@@ -1,6 +1,106 @@
 ----------------------------------------------------------------
-2019-07-30 18:25:50.031 GMT:
- Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance a816c00e-016c-4421-9e70-ffffe81e32f9
+2019-08-01 13:11:56.708 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance a816c00e-016c-4d4e-f7c6-ffffe81e32f9
 on database directory memory:C:\Users\Asus\Documents\GitHub\TipcoStock\.metadata\.plugins\com.tibco.xpd.resources\db\TibcoResources  
 
 Database Class Loader started - derby.database.classpath=''
+2019-08-02 07:23:11.547 GMT Thread[Worker-180,5,main] (XID = 54890), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2019-08-02 07:23:11.547 GMT Thread[Worker-180,5,main] (XID = 54890), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/OrderManager.module/Processes/ordermanager/module/CheckCashAccount.bwp#TIMESTAMP :end parameter begin parameter #4: /OrderManager.module/Processes/ordermanager/module/CheckCashAccount.bwp :end parameter begin parameter #5: OrderManager.module :end parameter begin parameter #6: 1564730591424 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190801151158010' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed
+2019-08-02 07:23:12.183 GMT Thread[Worker-178,5,main] (XID = 55140), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2019-08-02 07:23:12.183 GMT Thread[Worker-178,5,main] (XID = 55140), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/OrderManager.module/Processes/ordermanager/module/CheckCashAccount.bwp#TIMESTAMP :end parameter begin parameter #4: /OrderManager.module/Processes/ordermanager/module/CheckCashAccount.bwp :end parameter begin parameter #5: OrderManager.module :end parameter begin parameter #6: 1564730591424 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190801151158010' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed
+2019-08-02 07:23:12.788 GMT Thread[Worker-187,5,main] (XID = 55420), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2019-08-02 07:23:12.788 GMT Thread[Worker-187,5,main] (XID = 55420), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/OrderManager.module/Processes/ordermanager/module/CheckSecurityAccount.bwp#TIMESTAMP :end parameter begin parameter #4: /OrderManager.module/Processes/ordermanager/module/CheckSecurityAccount.bwp :end parameter begin parameter #5: OrderManager.module :end parameter begin parameter #6: 1564729123768 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190801151158010' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed
+2019-08-02 07:23:12.809 GMT Thread[Worker-175,5,main] (XID = 55482), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2019-08-02 07:23:12.809 GMT Thread[Worker-175,5,main] (XID = 55482), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/OrderManager.module/Processes/ordermanager/module/ProcessCustomerOrder.bwp#TIMESTAMP :end parameter begin parameter #4: /OrderManager.module/Processes/ordermanager/module/ProcessCustomerOrder.bwp :end parameter begin parameter #5: OrderManager.module :end parameter begin parameter #6: 1564729120700 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190801151158010' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed
+2019-08-02 07:23:13.073 GMT Thread[Worker-187,5,main] (XID = 55495), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Cleanup action starting
+2019-08-02 07:23:13.073 GMT Thread[Worker-187,5,main] (XID = 55495), (SESSIONID = 1), (DATABASE = memory:TibcoResources), (DRDAID = null), Failed Statement is: INSERT INTO global_references_index(internal_name,internal_type,internal_uri,internal_path,internal_project,internal_updatetimestamp,sourceURI,targetIdentifier,sourceFilePath,targetFilePath,info,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?) with 12 parameters begin parameter #1: NULL :end parameter begin parameter #2: NULL :end parameter begin parameter #3: platform:/resource/OrderManager.module/Processes/ordermanager/module/ProcessCustomerOrder.bwp#TIMESTAMP :end parameter begin parameter #4: /OrderManager.module/Processes/ordermanager/module/ProcessCustomerOrder.bwp :end parameter begin parameter #5: OrderManager.module :end parameter begin parameter #6: 1564729120700 :end parameter begin parameter #7: NULL :end parameter begin parameter #8: NULL :end parameter begin parameter #9: NULL :end parameter begin parameter #10: NULL :end parameter begin parameter #11: NULL :end parameter begin parameter #12: NULL :end parameter 
+ERROR 23505: The statement was aborted because it would have caused a duplicate key value in a unique or primary key constraint or unique index identified by 'SQL190801151158010' defined on 'GLOBAL_REFERENCES_INDEX'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:303)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insertAndCheckDups(IndexChanger.java:465)
+	at org.apache.derby.impl.sql.execute.IndexChanger.doInsert(IndexChanger.java:383)
+	at org.apache.derby.impl.sql.execute.IndexChanger.insert(IndexChanger.java:589)
+	at org.apache.derby.impl.sql.execute.IndexSetChanger.insert(IndexSetChanger.java:268)
+	at org.apache.derby.impl.sql.execute.RowChangerImpl.insertRow(RowChangerImpl.java:453)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.normalInsertCore(InsertResultSet.java:1022)
+	at org.apache.derby.impl.sql.execute.InsertResultSet.open(InsertResultSet.java:495)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.executeStmt(GenericPreparedStatement.java:416)
+	at org.apache.derby.impl.sql.GenericPreparedStatement.execute(GenericPreparedStatement.java:297)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(EmbedStatement.java:1235)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.executeBatchElement(EmbedPreparedStatement.java:1009)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeBatch(EmbedStatement.java:974)
+	at com.tibco.xpd.resources.internal.db.impl.derby.ResourceDbDerby.update(ResourceDbDerby.java:1447)
+	at com.tibco.xpd.resources.internal.indexer.IndexerServiceImpl$2.run(IndexerServiceImpl.java:820)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Cleanup action completed

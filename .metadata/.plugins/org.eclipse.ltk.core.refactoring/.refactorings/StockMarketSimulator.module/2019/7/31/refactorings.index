@@ -3,3 +3,6 @@
 1564511708882	Rename Module Configuration Property Group from 'Service' to 'Services'
 1564511719064	Rename Module Configuration Property from '/Service/newProperty' to 'DestinationName'
 1564511736382	Rename Module Configuration Property from '/Service/newProperty1' to 'DestinationNameResponse'
+1564569220648	Rename Module Configuration Property Group from 'newGroup' to 'Service2'
+1564569259316	Rename Module Configuration Property from '/Service2/newProperty' to 'DestinationNameReq'
+1564569276145	Rename Module Configuration Property from '/Service2/newProperty' to 'DestinationNameRes'
